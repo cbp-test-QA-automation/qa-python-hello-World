@@ -1,6 +1,6 @@
 [
   {
-    "component_id": "cc95ecc1-a2f0-42e9-a7ad-d8d00281c34e",
+    "component_id": "bec0cfb6-442d-4e22-b493-b7345e02cd6b",
     "branch_name": "workflow-branch-1",
     "workflow_file_name": "workflow-1.yaml",
     "inputs": {
@@ -9,7 +9,7 @@
     }
   },
   {
-    "component_id": "cc95ecc1-a2f0-42e9-a7ad-d8d00281c34e",
+    "component_id": "bec0cfb6-442d-4e22-b493-b7345e02cd6b",
     "branch_name": "workflow-branch-2",
     "workflow_file_name": "workflow-2.yaml"
   }
