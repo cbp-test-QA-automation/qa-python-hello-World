@@ -15,6 +15,12 @@ on:
 jobs:
   deploy-app1:
     steps:
+      - name: Echo Manifests
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          echo ${{ inputs.manifest}}
+        
       - name: Deploy cbpautomation/python-hello-world-docker
         if: ${{ fromJSON(inputs.manifest)['cbpautomation/python-hello-world-docker'].deploy }}
         uses: cloudbees-io/register-deployed-artifact@v2
