@@ -3,6 +3,17 @@ kind: workflow
 name: Callable Workflow
 on:
   workflow_call:
+    inputs:
+      Environment:
+        type: choice
+        options:
+          - QA
+          - PROD
+        default: QA
+      TAG:
+        type: string
+        required: true
+        description: Enter the tag value
 jobs:
   say_hi:
     steps:
@@ -11,3 +22,5 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
+          echo "${{ inputs.Environment }}"
+          echo "${{ inputs.Tag }}"
