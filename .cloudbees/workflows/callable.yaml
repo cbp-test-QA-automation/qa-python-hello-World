@@ -23,4 +23,4 @@ jobs:
         run: |
           echo "hello world"
           echo "${{ inputs.Environment }}"
-          echo "${{ inputs.Tag }}"
+          echo "${{ inputs.TAG }}"
