@@ -3,6 +3,24 @@ kind: workflow
 name: Foo Workflow
 on:
   workflow_dispatch:
+    inputs:
+      Environment:
+        type: choice
+        options:
+          - QA
+          - PROD
+        default: QA
+        required: true
+        description: Choose the environemnt
+      TAG:
+        type: string
+        default: "@Login"
+        required: true
+        description: Enter the test tag
 jobs:
   call_bar_workflow:
     uses: cbp-test-QA-automation/qa-python-hello-World/.cloudbees/workflows/callable.yaml
+    with: 
+      Environment: ${{ inputs.Environment }}
+      TAG: ${{ inputs.TAG }}
+
