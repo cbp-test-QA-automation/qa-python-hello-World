@@ -3,6 +3,7 @@ kind: workflow
 name: RegisterDeployedArtifact
 on:
   workflow_dispatch:
+    
 jobs:
   env_reg_artifacts:
     steps:
