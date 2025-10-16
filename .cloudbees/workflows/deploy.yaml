@@ -15,7 +15,6 @@ on:
 jobs:
   deploy-app1:
     timeout-minutes: 5
-    environment: ${{ inputs.environment }}
     steps:
       - name: Get artifact details
         id: get-artifact-details
