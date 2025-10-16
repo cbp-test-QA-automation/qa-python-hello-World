@@ -5,7 +5,7 @@ name: My workflow
 on:
   workflow_call:
     inputs:
-      manifest:
+      artifact-id:
         type: string
         required: true
       environment:
@@ -21,5 +21,5 @@ jobs:
         if: ${{ fromJSON(inputs.manifest)['cbpautomation/python-hello-world-docker'].deploy }}
         uses: cloudbees-io/register-deployed-artifact@v2
         with:
-          artifact-id: "${{ fromJSON(inputs.manifest)['cbpautomation/python-hello-world-docker'].id }}"
+          artifact-id: "${{ inputs.artifact-id }}"
           target-environment: "${{ inputs.environment }}"
