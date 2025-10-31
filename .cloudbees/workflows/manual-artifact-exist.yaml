@@ -28,4 +28,4 @@ jobs:
         shell: sh
         run: |
           echo "CB_VERSION: ${{cloudbees.version}}"
-          echo "Date: 2025-10-31T10:34:36.854Z"
+          echo "Date: 2025-10-31T10:36:38.471Z"
